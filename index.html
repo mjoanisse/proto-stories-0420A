@@ -1,1 +1,46 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <title>Prototype / Proof of Concept for CHH Stories Sub Categories</title>
+  <link rel="stylesheet" href="https://use.typekit.net/gxq7ude.css" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="stories">
+    <nav class="proto-nav">
+      <ul>
+        <li><a data-get-id="1-04" href="#04">04</a></li>
+        <li><a data-get-id="2-06" href="#06">06</a></li>
+      </ul>
+    </nav>
+    <section class="chh-narrative on" data-id="1-04">
+      <div class="preview-box">
+        <h3 class="preview-box__heading">Sub topics in this category</h3>
+        <div class="preview-box__main">
+          <ul>
+            <li><a onclick="event.preventDefault();" href="#a" class="preview-box__list-link"><span class="image" style="background-image:url('images/Proto-04-Thumbnail_01.jpg');"></span><span class="text">17th Century Wars</span></a></li>
+            <li><a onclick="event.preventDefault();" href="#b" class="preview-box__list-link"><span class="image" style="background-image:url('images/Proto-04-Thumbnail_02.jpg');"></span><span class="text">The Imperial Wars</span></a></li>
+            <li><a onclick="event.preventDefault();" href="#c" class="preview-box__list-link"><span class="image"></span><span class="text">In Defence of Their Lands</span></a></li>
+          </ul>
+        </div>
+        <a href="#show-all" class="pb-show-all-button">Show all sub topics in this category</a>
+      </div>
+      <div class="chh-narrative-body">
+      <h4 class="chh-narrative-title">The Arrival of Europeans</h4>
+      <p class="chh-narrative-lead">Indigenous peoples make first contact with Europeans.</p>
+      <p>Encounters between First Peoples and the newcomers were characterized by curiosity, mutual distrust and sometimes violence. Yet they sought and found ways to coexist. A permanent European colony was the result.</p>
+      </div>
+    </section>
+    <section class="chh-narrative n206" data-id="2-06">
+      <div class="chh-narrative-body">
+      <h4 class="chh-narrative-title">Transforming a Dominion</h4>
+      <p class="chh-narrative-lead">Canada becomes a more urban and multi-ethnic country.</p>
+      <p>By the early 1900s, massive immigration and ongoing industrialization were transforming Canada. In the West, increased settlement led to the development of the Prairies for agriculture and created new communities. Rapid growth and industrialization established dynamic cities across the country. The Canada we know today was taking shape.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
