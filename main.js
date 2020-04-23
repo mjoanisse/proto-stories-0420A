@@ -13,6 +13,7 @@ function minimizePreviewBox() {
   setTimeout(() => {
     previewBox.removeClass('rev-trans');
   }, 1);
+  enableMainScroll();
 }
 function enableMainScroll() {
   $('html, body').removeClass('scroll-none');
@@ -23,7 +24,17 @@ function disableMainScroll() {
 $(document).on('keydown', function(e) {
   if (e.key == 'Escape') {
     minimizePreviewBox();
-    enableMainScroll();
+  }
+});
+$(document).on('click', function(e) {
+  var eventTarget = $(e.target);
+  // If "modal" not open, return.
+  if ($('.preview-box.full').length < 1) return;
+  // Traverse event target ancestors and see if the preview box is present.
+  // If it's not, we know the click lies somewhere outside the preview box.
+  // In which case = .. we minimize our preview box.
+  if (!eventTarget.closest('.preview-box').length) {
+    minimizePreviewBox();
   }
 });
 $(function() {
